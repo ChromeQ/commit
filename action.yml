@@ -1,4 +1,4 @@
-name: Verified commit
+name: Verified Git Commit 
 description: GitHub Action to create verified commits
 inputs:
   token:
