@@ -29,13 +29,13 @@ describe("Blob", () => {
     const dest = fs.createWriteStream(tempy.file({ extension: "json" }));
     await promisify(finished)(source.pipe(dest));
     expect(
-      JSON.parse(fs.readFileSync(dest.path.toString()).toString())
+      JSON.parse(fs.readFileSync(dest.path.toString()).toString()),
     ).toEqual(
       JSON.parse(
         fs
           .readFileSync(join(__dirname, "fixtures", "blob.payload.json"))
-          .toString()
-      )
+          .toString(),
+      ),
     );
   });
 });
